@@ -1,0 +1,10 @@
+Teste unitário - Teste de uma função, por exemplo
+Teste de integração - Testa a comunicação de duas partes do seu sistema
+
+*Assertivas - verificações JUnit
+Assert.assertEquals( expected, par); = verifica se o resultado está como esperado
+ou 
+Assertions.assertThat(resultado).isEqualsTo(15);
+
+para verificar entre um valor e outro
+Assertions.assertThat(resultado).isBetween(14, 16);
