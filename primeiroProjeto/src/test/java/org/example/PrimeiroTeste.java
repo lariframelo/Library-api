@@ -12,16 +12,41 @@ public class PrimeiroTeste {
         int num1 = 10, num2 = 5;
 
         //execução
-        int resultado = calculadora.somar(10, 5);
+        int resultado = calculadora.somar(num1,num2);
 
         //verificações
-        Assert.assertEquals(15, resultado);
 
 
         }
+    @Test (expected = RuntimeException.class)
+    public void naoSomarDoisNumerosNegativos() {
+        //cenario
+        Calculadora calculadora = new Calculadora();
+        int num1 = -10;
+        int num2 = 5;
+
+        //execução
+        calculadora.somar(num1,num2);
+}
+    @Test
+    public void multiplicarDoisNumeros() {
+        Calculadora calculadora = new Calculadora();
+        int num1 = 5;
+        int num2 = 10;
+
+        calculadora.multiplicar(num1,num2);
     }
 
+    @Test
+    public void dividirDoisNumeros() {
+        Calculadora calculadora = new Calculadora();
+        int num1 = 5;
+        int num2 = 10;
 
+        calculadora.dividir(num1,num2);
+    }
+
+   
     class Calculadora {
 
         int somar(int num1, int num2) {
