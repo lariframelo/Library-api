@@ -46,7 +46,7 @@ public class PrimeiroTeste {
         calculadora.dividir(num1,num2);
     }
 
-   
+
     class Calculadora {
 
         int somar(int num1, int num2) {
