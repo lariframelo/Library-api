@@ -1,3 +1,4 @@
+import Pessoa.Pessoa;
 import com.sun.xml.internal.ws.policy.AssertionSet;
 import org.assertj.core.api.Assertions;
 import org.assertj.core.api.Assertions.*;
@@ -9,13 +10,33 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CadastroPessoasTeste {
 
     @Test
-    public void deveCriarOCadastroPessoas(){
-        //cenário
+    public void deveCriarCadastroPessoas(){
+        //cenário e execução
         CadastroPessoas cadastro = new CadastroPessoas();
 
+        //verificação
+        Assertions.assertThat(cadastro.getPessoas()).isEmpty();
+    }
+
+    @Test
+    public void deveAdicionarUmaPessoa(){
+        //cenário
+        CadastroPessoas cadastroPessoas = new CadastroPessoas();
+        Pessoa pessoa = new Pessoa();
+
+        //execução
+        cadastroPessoas.adicionar(pessoa);
 
         //verificação
-
-        Assertions.assertThat(cadastro).();
+        Assertions.assertThat(cadastroPessoas.getPessoas())
+                .isNotEmpty()
+                .hasSize(1)
+                .contains(pessoa);
     }
+
+    @Test (expected = PessoaSemNotException.class)
+    public void naoDeveAdicionarPessoaComNomeVazio() {
+
+    }
+
 }
