@@ -17,7 +17,10 @@ public class CadastroPessoas {
     }
 
     public void adicionar(Pessoa pessoa) {
+        if(pessoa.getNome() == null) {
+            throw new PessoaSemNotException();
+        }
         this.pessoas.add(pessoa);
-
+        pessoa.setNome("Willian");
     }
 }

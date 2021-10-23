@@ -36,7 +36,12 @@ public class CadastroPessoasTeste {
 
     @Test (expected = PessoaSemNotException.class)
     public void naoDeveAdicionarPessoaComNomeVazio() {
+        //cenário
+        CadastroPessoas cadastroPessoas = new CadastroPessoas();
+        Pessoa pessoa = new Pessoa();
 
+        //execução
+        cadastroPessoas.adicionar(pessoa);
     }
 
 }
