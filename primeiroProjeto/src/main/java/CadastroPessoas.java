@@ -23,4 +23,8 @@ public class CadastroPessoas {
         this.pessoas.add(pessoa);
         pessoa.setNome("Willian");
     }
+
+    public void remover(Pessoa pessoa) {
+        this.pessoas.remove(pessoa);
+    }
 }

@@ -44,4 +44,18 @@ public class CadastroPessoasTeste {
         cadastroPessoas.adicionar(pessoa);
     }
 
+    @Test
+    public void deveRemoverUmaPessoa() {
+        //cenario
+        CadastroPessoas cadastroPessoas = new CadastroPessoas();
+        Pessoa pessoa = new Pessoa();
+        cadastroPessoas.adicionar(pessoa);
+        pessoa.setNome("Wilson");
+
+        //execução
+        cadastroPessoas.remover(pessoa);
+
+        //verificação
+        Assertions.assertThat(cadastroPessoas.getPessoas()).isEmpty();
+    }
 }
