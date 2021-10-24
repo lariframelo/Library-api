@@ -2,14 +2,16 @@ import Pessoa.Pessoa;
 import com.sun.xml.internal.ws.policy.AssertionSet;
 import org.assertj.core.api.Assertions;
 import org.assertj.core.api.Assertions.*;
-import org.junit.Assert;
-import org.junit.Test;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class CadastroPessoasTeste {
 
     @Test
+    @DisplayName("Deve criar o cadastro de pessoas")
     public void deveCriarCadastroPessoas(){
         //cenário e execução
         CadastroPessoas cadastro = new CadastroPessoas();
