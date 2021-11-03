@@ -21,6 +21,7 @@ public class CadastroPessoasTeste {
     }
 
     @Test
+    @DisplayName("Deve Adicionar uma pessoa")
     public void deveAdicionarUmaPessoa(){
         //cenário
         CadastroPessoas cadastroPessoas = new CadastroPessoas();
